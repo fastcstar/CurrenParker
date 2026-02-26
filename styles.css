@@ -1,0 +1,127 @@
+:root{
+    --fern-dark: #3E5F34;      /* header stays darker */
+    --fern-main: #6B8E4E;      /* warmer, browner green */
+    --fern-light: #7FA866;     /* lighter interior tone */
+    --cream: #F4EBD0;          /* slightly warmer cream */
+    --card: rgba(244,235,208,0.18);
+    --card-border: rgba(244,235,208,0.35);
+}
+
+* { box-sizing: border-box; }
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--cream);
+    background: linear-gradient(to bottom, var(--fern-main), var(--fern-dark));
+}
+
+/* ---------- Header / Nav ---------- */
+header{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(8px);
+    background: rgba(62,95,52,0.75);
+    border-bottom: 1px solid var(--card-border);
+}
+
+.nav-wrap{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+    .brand{
+        font-weight: 700;
+        font-size: 1.4rem;
+        letter-spacing: 0.5px;
+    }
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-left: auto;
+}
+
+nav a{
+    color: var(--cream);
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    transition: 0.15s ease;
+    font-size: 0.95rem;
+}
+
+nav a:hover{
+    border-color: var(--card-border);
+    background: rgba(245,245,220,0.08);
+}
+
+nav a.active{
+    border-color: var(--card-border);
+    background: rgba(245,245,220,0.14);
+}
+
+/* ---------- Layout ---------- */
+main{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 28px 16px 60px;
+}
+
+.card{
+    background: rgba(127,168,102,0.25); /* lighter moss tone */
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 18px;
+    margin: 14px 0;
+}
+
+h1{ margin: 8px 0 12px; font-size: 2.2rem; }
+h2{ margin: 10px 0; font-size: 1.4rem; }
+p{ line-height: 1.55; margin: 10px 0; }
+
+.small{
+    opacity: 0.9;
+    font-size: 0.95rem;
+}
+
+.list{
+    margin: 10px 0 0;
+    padding-left: 18px;
+}
+
+.footer{
+    opacity: 0.85;
+    font-size: 0.9rem;
+    margin-top: 30px;
+}
+
+.research-image-container{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 40px 0;
+}
+
+.research-frame{
+    max-width: 630px;      /* Hard limit width */
+    border-radius: 18px;
+    overflow: hidden;      /* Keeps edges clean */
+    border: 2px solid var(--card-border);
+    box-shadow: 0 14px 35px rgba(0,0,0,0.3);
+}
+
+.research-frame img{
+    display: block;
+    width: 100%;           /* Fill the frame */
+    height: auto;          /* Preserve proportions */
+}
